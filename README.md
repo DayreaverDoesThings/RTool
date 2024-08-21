@@ -27,7 +27,7 @@ RTOOL is a powerful and versatile batch script designed to assist IT professiona
 
 ### Prerequisites
 - A Windows operating system with command-line access.
-- Administrator privileges for certain features (e.g., checking admin status, system information retrieval).
+- Administrator privileges for certain features (e.g. system information retrieval).
 
 ### Installation
 1. Download the `RTOOL.bat` script from this repository.
