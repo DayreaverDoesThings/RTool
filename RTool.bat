@@ -158,7 +158,7 @@ cd %TEMP%
 echo x=msgbox("%msgboxtext%" ,%msgboxbuttons%+%msgboxicon%, "%msgboxtitle%") > temporary.vbs
 echo Starting VBS file...
 start temporary.vbs
-timeout 2 /nobreak >nul
+timeout 1 /nobreak >nul
 echo Deleting VBS file...
 del %TEMP%\temporary.vbs
 cls
