@@ -23,6 +23,7 @@ echo.
 echo ####################
 echo.
 timeout 3 /nobreak >nul
+for /f "delims=" %%A in ('cd') do set "RToolCurDir=%%A"
 cls
 color 06
 echo.
@@ -153,13 +154,15 @@ set /p msgboxtitle="Input custom title: "
 cls
 echo.
 echo Creating VBS file...
+cd %TEMP%
 echo x=msgbox("%msgboxtext%" ,%msgboxbuttons%+%msgboxicon%, "%msgboxtitle%") > temporary.vbs
 echo Starting VBS file...
 start temporary.vbs
 timeout 2 /nobreak >nul
 echo Deleting VBS file...
-del temporary.vbs
+del %TEMP%\temporary.vbs
 cls
+cd %RToolCurDir%
 goto menu
 
 :exitprog
